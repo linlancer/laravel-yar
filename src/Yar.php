@@ -47,7 +47,7 @@ class Yar
             if (isset($this->mapConfig['read_timeout'])) {
                 $yarClient->setOpt(
                     YAR_OPT_TIMEOUT,
-                    $this->mapConfig['connect_timeout']
+                    $this->mapConfig['read_timeout']
                 );
             }
         }
@@ -63,7 +63,7 @@ class Yar
                     $this->callback
                 );
             }
-        } catch (Yar_Client_Exception $e) {
+        } catch (\Yar_Client_Exception $e) {
             throw $e;
         }
 
@@ -125,7 +125,7 @@ class Yar
         return $this;
     }
 
-    public function __callStatic($name, $arguments)
+    public static function __callStatic($name, $arguments)
     {
         $yarClient = new self($name);
         if (isset($arguments[1]) && $arguments[1] == true) {
