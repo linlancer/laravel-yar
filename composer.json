@@ -1,15 +1,16 @@
 {
   "name": "linlancer/laravel-yar",
-  "description": "Laravel Yar组件",
+  "description": "Laravel Yar组件 基于 Reprover 版本改造 后续废弃",
   "type": "library",
   "license": "MIT",
   "autoload": {
-    "psr-0": {
+    "psr-4": {
       "Reprover\\LaravelYar\\": "src/"
     }
   },
   "require": {
-    "laravel/laravel": "^5.8"
+    "laravel/laravel": "^5.8",
+    "ext-yar": "*"
   },
   "extra": {
     "laravel": {

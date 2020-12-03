@@ -7,7 +7,7 @@
  * Time: 上午12:01
  */
 
-namespace Reprover\LaravelYar\Controllers;
+namespace Reprover\LaravelYar\Controller;
 
 use Illuminate\Routing\Controller;
 use Yar_Server;
